@@ -10,8 +10,6 @@ To create a source, reading from a given Websocket server, apply a YAML like the
 apiVersion: sources.eventing.knative.dev/v1alpha1
 kind: ContainerSource
 metadata:
-  labels:
-    controller-tools.k8s.io: "1.0"
   name: my-new-source
 spec:
   image: github.com/markusthoemmes/knative-websocket-eventsource/cmd
