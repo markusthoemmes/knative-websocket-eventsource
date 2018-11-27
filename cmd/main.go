@@ -57,9 +57,11 @@ func main() {
 			log.Println("error while reading message:", err)
 			return
 		}
-		if err := postMessage(message); err != nil {
-			log.Printf("sending event to channel failed: %v", err)
-		}
+		go func() {
+			if err := postMessage(message); err != nil {
+				log.Printf("sending event to channel failed: %v", err)
+			}
+		}()
 	}
 }
 
