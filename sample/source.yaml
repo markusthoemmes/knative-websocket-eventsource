@@ -3,9 +3,9 @@ kind: ContainerSource
 metadata:
   labels:
     controller-tools.k8s.io: "1.0"
-  name: containersource-sample
+  name: urbanobservatory-event-source
 spec:
-  image: github.com/markusthoemmes/urbanobservatory-knative-eventsource/cmd
+  image: github.com/markusthoemmes/knative-websocket-eventsource/cmd
   args: 
     - '--source=wss://api.usb.urbanobservatory.ac.uk/stream'
   sink:
